@@ -54,8 +54,11 @@ target_include_directories(EMBARCA-PWM PRIVATE
 )
 
 # Add any user requested libraries
-target_link_libraries(EMBARCA-PWM 
-        
+target_link_libraries(EMBARCA-PWM
+        hardware_i2c
+        hardware_pio
+        hardware_adc
+        hardware_pwm        
         )
 
 pico_add_extra_outputs(EMBARCA-PWM)
